@@ -1,0 +1,20 @@
+body {
+    font-family: Helvetica;
+    text-align: center;
+}
+
+.menu {
+    font-size: 24px;
+    text-underline-offset: 1px;
+    font-weight: bold;
+    padding-bottom: 10px;
+    text-decoration: underline;
+    font-family: impact;
+
+}
+
+table{margin:auto;
+border:1px solid black}
+
+button {margin-top:10px;
+cursor:pointer;}
