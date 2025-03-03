@@ -1,0 +1,60 @@
+body {
+    margin: 0;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    background-color: #f9e3c6;
+}
+
+.container {
+    width: 450px;
+    height: 2000px;
+    border: 1px solid hsl(330, 100%, 98%);
+    border-radius: 15px;
+    background-color: white;
+    margin-top: 70px;
+}
+
+img {
+    display: block;
+    width: 410px;
+    height: 200px;
+    margin: 18px auto 0;
+    border-radius: 15px;
+}
+
+.prep {
+    width: 400px;
+    height: 140px;
+    background-color: hsl(330, 100%, 98%);
+    margin: auto;
+    border-radius: 15px;
+}
+
+li {
+    padding: 4px;
+}
+
+h3 {
+    padding-left: 20px;
+    padding-top: 17px;
+    margin-bottom: 0;
+}
+
+.nutrition {
+    width: 390px;
+    height: 300px;
+    margin: auto
+}
+
+.info {
+    padding: 8px 25px;
+    border-bottom: 1px solid grey;
+    display:flex;
+    justify-content: space-between;
+}
+
+.info span:last-child {
+    margin-left: auto;
+    width:50%;
+}
