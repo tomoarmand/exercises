@@ -1,8 +1,8 @@
 let correctPassword = "Javascript1";
-let password = "javascript";
+let password = "Javascript1";
 let message;
 
-if (password === "Javascript1") {
+if (password === correctPassword) {
     message = "Access Granted"
 }
 else {
