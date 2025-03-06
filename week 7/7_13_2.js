@@ -18,8 +18,7 @@ function calculatePrice (productType, quantity, isMember) {
         totalPrice = prices.grocery * quantity;
     }
 
-    console.log(prices)
-    // let totalPrice = price * quantity;
+    //console.log(prices)//
 
     if (isMember) {
         totalPrice = totalPrice * 0.9;
@@ -45,17 +44,20 @@ const order = {
 
         const total = electronicsTotal + clothingTotal + groceryTotal;
 
-        console.log("Electronics Total: $", electronicsTotal);
-        console.log("Clothing Total: $", clothingTotal);
-        console.log("Grocery Total: $", groceryTotal);
-        console.log("Overall Total: $", total);
+        this.electronicsTotal = electronicsTotal;
+        this.clothingTotal = clothingTotal;
+        this.groceryTotal = groceryTotal;
+        this.total = total;
 
         return total;
     }
 }
 
-//console.log("Order Total: $", order.totalPrice())
+const orderTotal = order.totalPrice();
 
-order.totalPrice();
+console.log("Electronics Total: $", order.electronicsTotal);
+console.log("Clothing Total: $", order.clothingTotal);
+console.log("Grocery Total: $", order.groceryTotal);
+console.log("Order Total: $", order.total);
 
-//console.log(calculatePrice("Electronics", 5, false))
+
