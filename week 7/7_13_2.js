@@ -43,21 +43,21 @@ const order = {
         const groceryTotal = calculatePrice("Grocery", this.grocery, true);
 
         const total = electronicsTotal + clothingTotal + groceryTotal;
+        return {
 
-        this.electronicsTotal = electronicsTotal;
-        this.clothingTotal = clothingTotal;
-        this.groceryTotal = groceryTotal;
-        this.total = total;
-
-        return total;
+        }
+        // this.electronicsTotal = electronicsTotal;
+        // this.clothingTotal = clothingTotal;
+        // this.groceryTotal = groceryTotal;
+        // this.total = total;
     }
 }
 
 const orderTotal = order.totalPrice();
 
-console.log("Electronics Total: $", order.electronicsTotal);
-console.log("Clothing Total: $", order.clothingTotal);
-console.log("Grocery Total: $", order.groceryTotal);
-console.log("Order Total: $", order.total);
+console.log("Electronics Total: $", orderTotal.electronicsTotal);
+console.log("Clothing Total: $", orderTotal.clothingTotal);
+console.log("Grocery Total: $", orderTotal.groceryTotal);
+console.log("Order Total: $", orderTotal.total);
 
 
