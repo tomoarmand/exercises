@@ -43,8 +43,12 @@ const order = {
         const groceryTotal = calculatePrice("Grocery", this.grocery, true);
 
         const total = electronicsTotal + clothingTotal + groceryTotal;
-        return {
 
+        return {
+            electronicsTotal: electronicsTotal,
+            clothingTotal: clothingTotal,
+            groceryTotal: groceryTotal,
+            total: total,
         }
         // this.electronicsTotal = electronicsTotal;
         // this.clothingTotal = clothingTotal;
