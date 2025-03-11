@@ -23,5 +23,13 @@ button2.addEventListener("click", function(){
     display2.innerText = value;
 })
 
+//Using onClick in html
+function plusOne() {
+    let display = document.getElementById("counter3");
+    let currentValue = display.innerText;
+    let newValue = parseInt(currentValue) + 1;
+    display.innerText = newValue;
+}
+
 
 

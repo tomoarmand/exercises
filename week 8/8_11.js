@@ -4,6 +4,8 @@ let doubledNumbers = numbers.map(element => element * 2);
 
 console.log(doubledNumbers);
 
+//Use forEach() when you just want to perform an action on each item.
+//Use map() when you want to transform each item and create a new list with the results.
 
 let greaterThanTwo = numbers.filter(element=> {
     if (element > 2) {
