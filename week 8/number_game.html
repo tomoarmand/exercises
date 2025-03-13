@@ -8,9 +8,16 @@
 </head>
 <body>
     <div class="container">
+        <div class="divwrap">You have
+        <div class="counter" id="guess-count"></div>
+        guesses left
+    </div>
+
         <div class ="message" id="message"></div>
-        <input type="text" id="input" placeholder="Enter your guess here">
-        <button type="button" id="button">Submit</button>
+        <input class="input" type="text" id="input" autofocus placeholder="Enter your guess here">
+        <button type="button" id="button" class="button">Submit</button>
+    </div>
+    <div class="game-over">
     </div>
     <script src="number_game.js"></script>
 </body>
