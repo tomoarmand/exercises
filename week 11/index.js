@@ -120,7 +120,7 @@ const person = {
     name: "Derrick",
     age: 25,
     occupation: "Surveyor",
-    city: "Adis Ababa",
+    city: "Addis Ababa",
     vehicle: "Lada"
 } 
 
