@@ -122,7 +122,7 @@ const person = {
     occupation: "Surveyor",
     city: "Addis Ababa",
     vehicle: "Lada"
-} 
+}
 
 function extractValues(array, object) {
     let [first, , , , fifth] = array;
@@ -166,3 +166,7 @@ function averageOfArguments(...numbers) {
 } //Practise different ways to write the above
 
 console.log(averageOfArguments(1, 2, 3))
+
+const createGreeting = (name) => console.log(`Hello ${name}`);
+
+createGreeting("James");
