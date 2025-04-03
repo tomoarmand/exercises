@@ -4,7 +4,7 @@ const inputField = document.getElementById("task-input");
 const addButton = document.getElementById("add-button");
 
 
-let toDoStorage = []
+let toDoStorage = [];
 
 
 addButton.addEventListener("click", function () {
@@ -40,9 +40,6 @@ function toPage(current, index) {
         }
     })
 
-
-
-
     item.appendChild(checkbox);
     // Creates a checkbox and append it to the div
     item.appendChild(document.createTextNode(" " + current.title));
@@ -67,16 +64,16 @@ function toPage(current, index) {
 
 function renderToDos() {
     toDoSection.replaceChildren();
-    // Updates todo list without repetition by removing old version of list
-    
-    
+    // Insert comment!!!
+
     let index = 0;
     toDoStorage.forEach(function (todo) {
         console.log(index)
         toPage(todo, index);
         index++;
-    // Gets the index for each element of toDoStorage
-    // We need this index to delete from toDoStorage using the splice method
+        // Gets the index for each element of toDoStorage
+        // Pass index as a parameter to toPage function 
+        // We need this index to delete from toDoStorage using the splice method
 
     })// Adds latest todo list to page, including latest addition
 };
@@ -86,7 +83,7 @@ document.addEventListener('DOMContentLoaded', function () {
     toDoStorage = loadToDos();
     renderToDos();
 
-})
+});
 
 function addToDo() {
     const toDoText = inputField.value;
