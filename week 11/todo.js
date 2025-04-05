@@ -1,14 +1,11 @@
 const toDoSection = document.getElementById("todo-section");
 const inputField = document.getElementById("task-input");
-
 const addButton = document.getElementById("add-button");
-
 
 let toDoStorage = [];
 
-
-addButton.addEventListener("click", function () {
-    addToDo()
+addButton.addEventListener("click", function() {
+    addToDo();
 })
 
 function toPage(current, index) {
@@ -27,7 +24,7 @@ function toPage(current, index) {
 
     if (checkbox.checked) {
         item.classList.add("completed");
-    }// Apply the completed class if the task is already completed
+    }// Apply the completed class if checked
 
     checkbox.addEventListener("change", function (event) {
 
@@ -41,17 +38,23 @@ function toPage(current, index) {
     })
 
     item.appendChild(checkbox);
-    // Creates a checkbox and append it to the div
-    item.appendChild(document.createTextNode(" " + current.title));
-    // Adds title text from object
+
+    const taskText = document.createElement("span");
+    taskText.className = "task-text"
+    taskText.textContent = current.title;
+    item.appendChild(taskText);
+    
     const deleteButton = document.createElement("button");
     deleteButton.className = "delete";
+    deleteButton.textContent = "X";
     item.appendChild(deleteButton);
+    
     toDoSection.appendChild(item);
     // Appends item to toDoSection
 
     deleteButton.addEventListener("click", function () {
         toDoStorage.splice(index, 1);
+    // Uses index created in renderToDos
         saveToDos();
         renderToDos();
         console.log(index);
@@ -64,18 +67,20 @@ function toPage(current, index) {
 
 function renderToDos() {
     toDoSection.replaceChildren();
-    // Insert comment!!!
+    // Clears the current content of toDoSection
 
     let index = 0;
-    toDoStorage.forEach(function (todo) {
-        console.log(index)
-        toPage(todo, index);
+    toDoStorage.forEach(function (object) {
+        toPage(object, index);
+        // Pass both the to-do object data 
+        // and the position of the object in the array to toPage function
         index++;
         // Gets the index for each element of toDoStorage
-        // Pass index as a parameter to toPage function 
         // We need this index to delete from toDoStorage using the splice method
 
-    })// Adds latest todo list to page, including latest addition
+    })
+    // When this function finishes, 
+    // all to-do items are freshly displayed on the page
 };
 
 

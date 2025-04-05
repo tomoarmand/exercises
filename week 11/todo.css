@@ -6,6 +6,7 @@ body {
     width: 100vw;
     justify-content: center;
     align-items: center;
+    font-family: Helvetica;
 }
 
 .container {
@@ -34,17 +35,54 @@ body {
 
 .input-wrap {
     width: 90%;
+    height: 50px;
     display: flex;
     justify-content: center;
+    align-items: center;
     gap: 10px;
     border: 1px solid;
 }
 
-.task-input {
-    height: 50%;
-    width: 
+.add-button {
+    height: 30px;
+    width: 30px;
 }
 
-.completed {
+.task-input {
+    height: 30px;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+.completed .task-text {
     text-decoration: line-through;
+}
+
+.checkbox {
+    height: 20px;
+    width: 20px
+}
+
+.delete {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: bold;
+
+    border-radius: 50%;
+    border: 1px;
+    width: 25px;
+    height: 25px;
+    margin-right: 5px
+}
+
+.todo-item {
+    display: flex;
+    gap: 10px;
+}
+
+.task-text {
+    display: flex;
+    flex-grow: 1;
+    font-size: 20px
 }
