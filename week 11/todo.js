@@ -20,11 +20,13 @@ function toPage(current, index) {
     // .checked is a property of checkbox inputs that determines if they
     // appear checked or unchecked
     // current.completed is a boolean: 
-    // if current.completed is false, chickbox will be unchecked
+    // if current.completed is false, checkbox will be unchecked
 
     if (checkbox.checked) {
         item.classList.add("completed");
     }// Apply the completed class if checked
+
+    item.appendChild(checkbox);
 
     checkbox.addEventListener("change", function (event) {
 
@@ -36,8 +38,6 @@ function toPage(current, index) {
             item.classList.remove("completed");
         }
     })
-
-    item.appendChild(checkbox);
 
     const taskText = document.createElement("span");
     taskText.className = "task-text"
