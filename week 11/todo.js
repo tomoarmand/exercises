@@ -63,13 +63,34 @@ function toPage(current, index) {
     })
 };
 
-
-
 function renderToDos() {
     toDoSection.replaceChildren();
     // Clears the current content of toDoSection
 
-    let index = 0;
+    if(toDoStorage.length === 0){
+        const emptyState = document.createElement("div");
+        emptyState.className = "empty-state";
+
+        const emptyIcon = document.createElement("div");
+        emptyIcon.className = "empty-icon";
+        emptyIcon.innerHTML = "📝";
+
+        const emptyText1 = document.createElement("div");
+        emptyText1.className = "empty-text1";
+        emptyText1.innerText = "Your task list is empty!";
+
+        const emptyText2 = document.createElement("div");
+        emptyText2.className = "empty-text2";
+        emptyText2.innerText = "Add a task using the input field above.";
+
+        emptyState.appendChild(emptyIcon);
+        emptyState.appendChild(emptyText1);
+        emptyState.appendChild(emptyText2);
+
+        toDoSection.appendChild(emptyState);
+    } else {
+        let index = 0;
+
     toDoStorage.forEach(function (object) {
         toPage(object, index);
         // Pass both the to-do object data 
@@ -77,12 +98,11 @@ function renderToDos() {
         index++;
         // Gets the index for each element of toDoStorage
         // We need this index to delete from toDoStorage using the splice method
-
     })
+}
     // When this function finishes, 
     // all to-do items are freshly displayed on the page
 };
-
 
 document.addEventListener('DOMContentLoaded', function () {
     toDoStorage = loadToDos();
