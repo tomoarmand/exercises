@@ -6,21 +6,23 @@ import './App.css'
 
 function Clock() {
   const [time, setTime] = useState(new Date());
-  const [count, setCount] = useState(0)
+  // const [count, setCount] = useState(0)
   
-  // useEffect(() => {
-  //   setTime(new Date())
-  // }, [time])
+  const startClock = () => {
+      setInterval(() => {
+        setTime(new Date())
+      }, 1000)
+  }
 
-  useEffect(() => {
-    console.log(count)
-  }, [count])
+  // useEffect(() => {
+  //   console.log(count)
+  // }, [count])
   
   return (
     <div>
+      <button onClick={startClock}>Start Clock</button>
       <h2>Current time: {time.toLocaleTimeString()}</h2>
       <p>This clock updates every second</p>
-      <button onClick={() => setCount(count + 1)}>{count}</button>
     </div>
   );
 }
