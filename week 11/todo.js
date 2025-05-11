@@ -51,7 +51,7 @@ function toPage(current, index) {
     
     toDoSection.appendChild(item);
     // Appends item to toDoSection
-
+ 
     deleteButton.addEventListener("click", function () {
         toDoStorage.splice(index, 1);
     // Uses index created in renderToDos
